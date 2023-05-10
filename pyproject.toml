@@ -13,8 +13,10 @@ keywords = ["writing"]
 authors = [{ name = "Tugrul Ates", email = "me@tugrulates.com" }]
 classifiers = [
   "Development Status :: 3 - Alpha",
-  "Programming Language :: Python :: 3",
   "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Environment :: Console",
   "Topic :: Text Processing :: Markup :: Markdown",
   "License :: OSI Approved :: MIT License",
@@ -55,7 +57,9 @@ test = [
 notes = "notes.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/tugrulates/notes-cli"
+Documentation = "https://github.com/tugrulates/notes-cli#readme"
+Issues = "https://github.com/tugrulates/notes-cli/issues"
+Source = "https://github.com/tugrulates/notes-cli"
 
 [tool.hatch.build]
 artifacts = [
