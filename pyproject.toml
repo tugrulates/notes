@@ -13,8 +13,10 @@ keywords = ["writing"]
 authors = [{ name = "Tugrul Ates", email = "me@tugrulates.com" }]
 classifiers = [
   "Development Status :: 3 - Alpha",
-  "Programming Language :: Python :: 3",
   "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Environment :: Console",
   "Topic :: Text Processing :: Markup :: Markdown",
   "License :: OSI Approved :: MIT License",
@@ -31,8 +33,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "bandit[toml]==1.7.5",
-  "black==22.12.0",
-  "flake8-bugbear==22.12.6",
+  "black==23.3.0",
+  "flake8-bugbear==23.5.9",
   "flake8-builtins==2.1.0",
   "flake8-comprehensions==3.12.0",
   "flake8-docstrings==1.7.0",
@@ -41,7 +43,7 @@ dev = [
   "flake8-simplify==0.20.0",
   "flake8==6.0.0",
   "isort==5.12.0",
-  "mypy==0.991",
+  "mypy==1.2.0",
   "pep8-naming==0.13.3",
   "pytest==7.3.1",
   "types-PyYAML==6.0.12.9",
@@ -55,7 +57,9 @@ test = [
 notes = "notes.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/tugrulates/notes-cli"
+Documentation = "https://github.com/tugrulates/notes-cli#readme"
+Issues = "https://github.com/tugrulates/notes-cli/issues"
+Source = "https://github.com/tugrulates/notes-cli"
 
 [tool.hatch.build]
 artifacts = [
