@@ -3,7 +3,6 @@
 
 import json
 from pathlib import Path
-from typing import Optional
 
 import typer
 from pydantic.dataclasses import dataclass
@@ -19,7 +18,7 @@ class Config:
 
     vault: Path = Path(".")
     tags_note: Path = Path("meta") / Path("Tags")
-    blog: Optional[Path] = None
+    blog: Path = Path("")
 
     def json(self) -> str:
         """Return config as JSON string."""
