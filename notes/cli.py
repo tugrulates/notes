@@ -7,6 +7,7 @@ import typer
 from jinja2 import Environment, PackageLoader, select_autoescape
 from rich.console import Console
 from rich.syntax import Syntax
+from typing_extensions import Annotated
 
 from notes import config
 from notes.models import Vault
@@ -61,29 +62,31 @@ def validate_note(ctx: typer.Context, note: Path) -> Path:
     return note
 
 
-PatternArg = typer.Argument(
-    "*", help="Note name pattern.", autocompletion=complete_note
-)
+PatternArg = typer.Argument(help="Note name pattern.", autocompletion=complete_note)
 
 
 @app.command("config")
 def configure_app(
-    vault: Path = typer.Option(  # noqa: B008
-        cfg.vault,
-        is_eager=True,
-        prompt=not cfg.vault,
-        exists=True,
-        file_okay=False,
-        help="Vault directory containing notes. Specify at least once.",
-        callback=set_vault,
-    ),
-    tags_note: Path = typer.Option(  # noqa: B008
-        cfg.tags_note,
-        prompt=not cfg.tags_note,
-        help="Special note containing tags.",
-        autocompletion=complete_note,
-        callback=validate_note,
-    ),
+    vault: Annotated[
+        Path,
+        typer.Option(  # noqa: B008
+            is_eager=True,
+            prompt=not cfg.vault,
+            exists=True,
+            file_okay=False,
+            help="Vault directory containing notes. Specify at least once.",
+            callback=set_vault,
+        ),
+    ] = cfg.vault,
+    tags_note: Annotated[
+        Path,
+        typer.Option(  # noqa: B008
+            prompt=not cfg.tags_note,
+            help="Special note containing tags.",
+            autocompletion=complete_note,
+            callback=validate_note,
+        ),
+    ] = cfg.tags_note,
 ) -> None:
     """Update or print configuration."""
     cfg.tags_note = tags_note
@@ -93,7 +96,7 @@ def configure_app(
 
 @app.command("list")
 def list_notes(
-    pattern: Path = PatternArg,
+    pattern: Annotated[Path, PatternArg] = Path("*"),  # noqa: B008
 ) -> None:
     """List notes."""
     for note in get_vault().notes(pattern):
@@ -102,7 +105,7 @@ def list_notes(
 
 @tag.command(name="list")
 def list_tags(
-    pattern: Path = PatternArg,
+    pattern: Annotated[Path, PatternArg] = Path("*"),  # noqa: B008
 ) -> None:
     """List tags."""
     for tag in get_vault().tags(pattern):
@@ -111,7 +114,7 @@ def list_tags(
 
 @tag.command(name="css")
 def generate_tag_css(
-    pattern: Path = PatternArg,
+    pattern: Annotated[Path, PatternArg] = Path("*"),  # noqa: B008
     *,
     rich: bool = True,
     output: Optional[Path] = None,
@@ -128,13 +131,15 @@ def generate_tag_css(
 
 @blog.command("css")
 def generate_blog_css(
-    blog: Path = typer.Option(  # noqa: B008
-        cfg.blog,
-        prompt=not cfg.blog,
-        exists=True,
-        file_okay=False,
-        help="Repo directory containing blog code. Specify at least once.",
-    ),
+    blog: Annotated[
+        Path,
+        typer.Option(  # noqa: B008
+            prompt=not cfg.blog,
+            exists=True,
+            file_okay=False,
+            help="Repo directory containing blog code. Specify at least once.",
+        ),
+    ] = cfg.blog,
 ) -> None:
     """Generate css styles for tags."""
     generate_tag_css(
