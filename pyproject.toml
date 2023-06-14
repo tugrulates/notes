@@ -83,7 +83,6 @@ lint = [
 fmt = [
   "isort .",
   "black .",
-  "check",
 ]
 test = [
   "pytest -v",
