@@ -83,7 +83,6 @@ lint = [
 fmt = [
   "isort .",
   "black .",
-  "check",
 ]
 test = [
   "pytest -v",
@@ -95,8 +94,8 @@ cov = [
 [tool.bandit]
 exclude_dirs = ["tests"]
 
-[tool.mypy]
-strict = true
-
 [tool.isort]
 profile = "black"
+
+[tool.mypy]
+strict = true
