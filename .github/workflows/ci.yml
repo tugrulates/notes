@@ -56,3 +56,6 @@ jobs:
 
   done:
     needs: [lint, test, coverage, build]
+    runs-on: ubuntu-latest
+    steps:
+      - run: true
