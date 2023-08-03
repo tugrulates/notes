@@ -55,4 +55,4 @@ jobs:
       - uses: hynek/build-and-inspect-python-package@v1
 
   done:
-    needs: [lint, test, coverage, buil]
+    needs: [lint, test, coverage, build]
