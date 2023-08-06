@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "notes-cli"
+name = "notes"
 version = "0.0.1"
 description = 'Manage markdown notes'
 readme = "README.md"
@@ -57,9 +57,9 @@ test = [
 notes = "notes.cli:app"
 
 [project.urls]
-Documentation = "https://github.com/tugrulates/notes-cli#readme"
-Issues = "https://github.com/tugrulates/notes-cli/issues"
-Source = "https://github.com/tugrulates/notes-cli"
+Documentation = "https://github.com/tugrulates/notes#readme"
+Issues = "https://github.com/tugrulates/notes/issues"
+Source = "https://github.com/tugrulates/notes"
 
 [tool.hatch.build]
 artifacts = [
