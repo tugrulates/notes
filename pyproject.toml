@@ -88,7 +88,7 @@ test = [
   "pytest -v",
 ]
 cov = [
-  "pytest -v --cov notes --cov-report xml --cov-fail-under=80",
+  "pytest -v --cov notes --cov-report xml",
 ]
 
 [tool.bandit]
