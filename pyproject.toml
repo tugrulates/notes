@@ -27,7 +27,7 @@ dependencies = [
   "markdown-it-py[plugins]==3.0.0",
   "pydantic==2.9.2",
   "PyYAML==6.0.2",
-  "rich==13.9.3",
+  "rich==13.9.4",
   "typer[all]==0.12.5",
 ]
 
@@ -35,7 +35,7 @@ dependencies = [
 dev = [
   "bandit[toml]==1.7.10",
   "black==24.10.0",
-  "flake8-bugbear==24.8.19",
+  "flake8-bugbear==24.10.31",
   "flake8-builtins==2.5.0",
   "flake8-comprehensions==3.16.0",
   "flake8-docstrings==1.7.0",
@@ -50,7 +50,7 @@ dev = [
   "types-PyYAML==6.0.12.20240917",
 ]
 test = [
-  "pytest-cov==5.0.0",
+  "pytest-cov==6.0.0",
   "pytest==8.3.3",
 ]
 
