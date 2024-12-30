@@ -47,7 +47,7 @@ dev = [
   "mypy==1.14.0",
   "pep8-naming==0.14.1",
   "pytest==8.3.4",
-  "types-PyYAML==6.0.12.20241221",
+  "types-PyYAML==6.0.12.20241230",
 ]
 test = [
   "pytest-cov==6.0.0",
