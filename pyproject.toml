@@ -25,7 +25,7 @@ classifiers = [
 dependencies = [
   "Jinja2==3.1.5",
   "markdown-it-py[plugins]==3.0.0",
-  "pydantic==2.10.4",
+  "pydantic==2.10.5",
   "PyYAML==6.0.2",
   "rich==13.9.4",
   "typer[all]==0.15.1",
@@ -33,7 +33,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-  "bandit[toml]==1.8.0",
+  "bandit[toml]==1.8.2",
   "black==24.10.0",
   "flake8-bugbear==24.12.12",
   "flake8-builtins==2.5.0",
