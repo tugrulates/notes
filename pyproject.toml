@@ -23,7 +23,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
 ]
 dependencies = [
-  "Jinja2==3.1.5",
+  "Jinja2==3.1.6",
   "markdown-it-py[plugins]==3.0.0",
   "pydantic==2.10.6",
   "PyYAML==6.0.2",
