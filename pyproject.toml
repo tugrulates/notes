@@ -25,7 +25,7 @@ classifiers = [
 dependencies = [
   "Jinja2==3.1.6",
   "markdown-it-py[plugins]==3.0.0",
-  "pydantic==2.11.1",
+  "pydantic==2.11.2",
   "PyYAML==6.0.2",
   "rich==14.0.0",
   "typer[all]==0.15.2",
@@ -47,10 +47,10 @@ dev = [
   "mypy==1.15.0",
   "pep8-naming==0.14.1",
   "pytest==8.3.5",
-  "types-PyYAML==6.0.12.20250326",
+  "types-PyYAML==6.0.12.20250402",
 ]
 test = [
-  "pytest-cov==6.0.0",
+  "pytest-cov==6.1.1",
   "pytest==8.3.5",
 ]
 
