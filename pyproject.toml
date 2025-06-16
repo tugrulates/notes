@@ -25,10 +25,10 @@ classifiers = [
 dependencies = [
   "Jinja2==3.1.6",
   "markdown-it-py[plugins]==3.0.0",
-  "pydantic==2.11.5",
+  "pydantic==2.11.7",
   "PyYAML==6.0.2",
   "rich==14.0.0",
-  "typer[all]==0.15.4",
+  "typer[all]==0.16.0",
 ]
 
 [project.optional-dependencies]
@@ -41,17 +41,17 @@ dev = [
   "flake8-docstrings==1.7.0",
   "flake8-encodings[classes]==0.5.1",
   "flake8-return==1.2.0",
-  "flake8-simplify==0.21.0",
+  "flake8-simplify==0.22.0",
   "flake8==7.2.0",
   "isort==6.0.1",
-  "mypy==1.15.0",
+  "mypy==1.16.0",
   "pep8-naming==0.15.1",
-  "pytest==8.3.5",
+  "pytest==8.4.0",
   "types-PyYAML==6.0.12.20250516",
 ]
 test = [
-  "pytest-cov==6.1.1",
-  "pytest==8.3.5",
+  "pytest-cov==6.2.1",
+  "pytest==8.4.0",
 ]
 
 [project.scripts]
