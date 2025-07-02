@@ -76,7 +76,7 @@ def test_bare() -> None:
     """Test invocation with no arguments."""
     result = runner.invoke(cli.app)
     assert result.exit_code != 0
-    assert "Usage:" in result.stdout
+    assert "Usage:" in result.stderr
 
 
 def test_help() -> None:
@@ -106,14 +106,14 @@ def test_config_vault_missing() -> None:
     """Test that command with no vault fail."""
     result = runner.invoke(cli.app, "config --vault missing-dir")
     assert result.exit_code != 0
-    assert "missing-dir" in result.stdout
+    assert "missing-dir" in result.stderr
 
 
 def test_config_tags_note_missing() -> None:
     """Test that command with no vault fail."""
     result = runner.invoke(cli.app, "config --tags-note missing-dir")
     assert result.exit_code != 0
-    assert "missing-dir" in result.stdout
+    assert "missing-dir" in result.stderr
 
 
 def test_note_list() -> None:
