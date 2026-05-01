@@ -26,9 +26,9 @@ classifiers = [
 dependencies = [
   "Jinja2==3.1.6",
   "markdown-it-py[plugins]==3.0.0",
-  "pydantic==2.12.5",
+  "pydantic==2.13.3",
   "PyYAML==6.0.3",
-  "rich==14.3.3",
+  "rich==15.0.0",
   "typer[all]==0.23.2",
 ]
 
