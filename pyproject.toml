@@ -29,7 +29,7 @@ dependencies = [
   "pydantic==2.13.4",
   "PyYAML==6.0.3",
   "rich==15.0.0",
-  "typer[all]==0.26.8",
+  "typer[all]==0.27.0",
 ]
 
 [project.optional-dependencies]
@@ -45,10 +45,10 @@ dev = [
   "flake8-simplify==0.30.0",
   "flake8==7.3.0",
   "isort==8.0.1",
-  "mypy==2.1.0",
+  "mypy==2.3.0",
   "pep8-naming==0.15.1",
   "pytest==9.1.1",
-  "types-PyYAML==6.0.12.20260518",
+  "types-PyYAML==6.0.12.20260724",
 ]
 test = [
   "pytest-cov==7.1.0",
